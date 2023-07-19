@@ -1,10 +1,16 @@
+const scroll = document.getElementsByClassName("scrollTop")[0];
+
+scroll.addEventListener("click", () => {
+  console.log("top");
+  scrollToTop();
+});
+
 window.addEventListener("scroll", function () {
-  var scroll = document.querySelector(".scrollTop");
   scroll.classList.toggle("active", window.scrollY > 500);
 });
 
-function scrollToTop() {
+const scrollToTop = () => {
   window.scrollTo({
     top: 0,
   });
-}
+};
